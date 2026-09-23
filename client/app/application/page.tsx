@@ -250,6 +250,16 @@ export default function ApplicationPage() {
             <motion.a
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.96 }}
+              href="/video"
+              className="pill-btn-secondary text-sm font-medium flex items-center gap-2"
+            >
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              <span>Watch Demo &rarr;</span>
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
               href="#explore"
               className="pill-btn-secondary text-sm font-medium"
             >

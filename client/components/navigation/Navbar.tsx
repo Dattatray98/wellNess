@@ -31,7 +31,7 @@ export function Navbar() {
         }`}
       >
         <a
-          href="#hero"
+          href="/application#hero"
           className="flex items-center gap-2.5 text-slate-900 hover:opacity-80 transition-opacity"
         >
           <div className="w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center text-[11px] font-bold text-white shadow-sm">
@@ -42,18 +42,25 @@ export function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
-          <a href="#explore" className="hover:text-slate-950 transition-colors">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+          <a href="/application#explore" className="hover:text-slate-950 transition-colors">
             Explore
           </a>
-          <a href="#canvas" className="hover:text-slate-950 transition-colors">
+          <a href="/application#canvas" className="hover:text-slate-950 transition-colors">
             Interactive Canvas
           </a>
-          <a href="#showcase" className="hover:text-slate-950 transition-colors">
+          <a href="/application#showcase" className="hover:text-slate-950 transition-colors">
             Showcase
           </a>
-          <a href="#philosophy" className="hover:text-slate-950 transition-colors">
+          <a href="/application#philosophy" className="hover:text-slate-950 transition-colors">
             Philosophy
+          </a>
+          <a
+            href="/video"
+            className="hover:text-[#1a73e8] transition-colors flex items-center gap-1.5 text-slate-700 font-semibold"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00c853] animate-pulse" />
+            <span>Video Demo</span>
           </a>
         </nav>
 
@@ -95,32 +102,40 @@ export function Navbar() {
           className="pointer-events-auto absolute top-16 w-64 glass-surface-elevated rounded-2xl p-4 shadow-xl border border-slate-900/[0.1] text-sm font-medium space-y-3.5 md:hidden text-slate-800"
         >
           <a
-            href="#explore"
+            href="/application#explore"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-1 hover:text-[#1a73e8]"
           >
             Explore Concepts
           </a>
           <a
-            href="#canvas"
+            href="/application#canvas"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-1 hover:text-[#1a73e8]"
           >
             Interactive Canvas
           </a>
           <a
-            href="#showcase"
+            href="/application#showcase"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-1 hover:text-[#1a73e8]"
           >
             Showcase
           </a>
           <a
-            href="#philosophy"
+            href="/application#philosophy"
             onClick={() => setMobileMenuOpen(false)}
             className="block py-1 hover:text-[#1a73e8]"
           >
             Philosophy
+          </a>
+          <a
+            href="/video"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-1.5 px-3 rounded-xl bg-[#1a73e8]/10 text-[#1a73e8] font-semibold flex items-center justify-between"
+          >
+            <span>▶ Watch Video Demo</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
           </a>
           <a
             href={APK_DOWNLOAD_URL}
