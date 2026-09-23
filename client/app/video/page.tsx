@@ -40,13 +40,6 @@ function parseVideoSource(url: string): VideoEmbedInfo {
   return { type: "direct", src: url };
 }
 
-const CHAPTERS = [
-  { time: "00:00", title: "On-Device Neural Parsing", desc: "Qwen2.5-0.5B INT4 audio-to-intent inference without network" },
-  { time: "00:45", title: "Deterministic Computation", desc: "ICMR-NIN IFCT nutrition validation with 0% hallucination" },
-  { time: "01:20", title: "Local SQLite Persistence", desc: "Relational storage audit commit to device memory" },
-  { time: "01:55", title: "Physical Step Sensor", desc: "Capacitor + Kotlin native hardware step counter integration" },
-];
-
 export default function VideoPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -341,27 +334,6 @@ export default function VideoPage() {
             )}
           </div>
         </motion.div>
-
-        {/* Feature Chapters Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-          {CHAPTERS.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.08 }}
-              className="glass-surface-elevated p-5 rounded-2xl flex items-start gap-4 border border-slate-900/[0.08] hover:shadow-md transition-shadow"
-            >
-              <span className="font-mono text-xs font-bold text-[#1a73e8] bg-[#1a73e8]/10 px-2.5 py-1 rounded-lg shrink-0">
-                {item.time}
-              </span>
-              <div className="space-y-1">
-                <h4 className="text-sm font-semibold text-slate-900">{item.title}</h4>
-                <p className="text-xs text-slate-500 leading-relaxed">{item.desc}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
 
         {/* Action Callouts */}
         <div className="flex flex-wrap items-center justify-center gap-4 pt-6">
